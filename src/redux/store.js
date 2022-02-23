@@ -3,7 +3,7 @@ import phoneReducer from '../redux/phones/phones-reducers';
 
 export const store = configureStore({
   reducer: {
-    contacts: phoneReducer,
+    phones: phoneReducer,
   },
 
   devTools: process.env.NODE_ENV !== 'production',

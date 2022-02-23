@@ -1,13 +1,12 @@
-import { createSelector } from 'reselect';
+export const getPhones = state => state.phones.items;
+export const getFilter = state => state.phones.filter;
 
-export const getPhones = createSelector(state => state.phones);
+export const getVisibleContacts = state => {
+  const allPhones = getPhones(state);
+  const filter = getFilter(state);
+  const normalizedFilter = filter.toLowerCase();
 
-// export const getVisiblePhones = createSelector(
-//     [getPhones],
-//     (phones) => {
-
-//         return phones.filter(({ id }) =>
-//             id.toLowerCase().includes(),
-//         );
-//     },
-// );
+  return allPhones.filter(({ name }) =>
+    name.toLowerCase().includes(normalizedFilter),
+  );
+};
