@@ -12,3 +12,10 @@ export const Item = styled.li`
   align-items: center;
   justify-content: space-between;
 `;
+
+export const Column = styled.p`
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: 16px auto;
+`;

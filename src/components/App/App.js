@@ -4,7 +4,7 @@ import { Title } from './App.styled';
 export default function App() {
   return (
     <div>
-      <Title>PhoneList</Title>
+      <Title>Phone List</Title>
 
       <PhoneList />
     </div>
