@@ -11,14 +11,16 @@ function PhoneList() {
 
   return (
     <List>
-      {phones.map(({ _id, name, email, phone, favorite }) => (
-        <Item key={_id}>
+      {phones.map(({ id, name, imageUrl, description, color, price }) => (
+        <Item key={id}>
           <Column>{name}</Column>
-          <Column>{email}</Column>
-          <Column>{phone}</Column>
+          <Column>{imageUrl}</Column>
+          <Column>{description}</Column>
+          <Column>{color}</Column>
+          <Column>{price}</Column>
         </Item>
       ))}
-      console.log(phones)
+      console.log(imageUrl)
     </List>
   );
 }

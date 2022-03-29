@@ -6,7 +6,7 @@ export const fetchPhones = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const phones = await phonesApi.fetchPhones();
-      return phones;
+      return phones.data.result;
     } catch (error) {
       return rejectWithValue(error);
     }
